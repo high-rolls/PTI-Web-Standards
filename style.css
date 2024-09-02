@@ -1,0 +1,63 @@
+:root {
+    --color-light: #eedf7a;
+    --color-primary: #d8a25e;
+    --color-secondary: #a04747;
+    --color-dark: #343131;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+html, body {
+    scroll-snap-type: y;
+}
+
+header {
+    background: url('images/cover.jpeg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, main, footer {
+    scroll-snap-align: start;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    scroll-snap-align: start;
+    background: linear-gradient(#e66465, #9198e5)
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    user-select: none;
+}
+
+@media screen and (max-width: 540px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+p {
+    color: var(--color-light);
+    background-color: color-mix(in srgb, var(--color-dark) 50%, transparent);
+    padding: 1rem;
+    margin: .5rem 0;
+    border-radius: 1rem;
+}
+
+.text-right {
+    text-align: right;
+    width: 33%;
+}
